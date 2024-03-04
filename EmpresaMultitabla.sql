@@ -5,25 +5,39 @@ GO
 --1. Añadir una nueva oficina para la ciudad de Madrid, con el número de oficina 30, con un objetivo
 --de 10.000 euros y región ‘Centro’. Suponer que conocemos el orden de los campos en la tabla.
 
+INSERT INTO Oficinas
+VALUES (30, 'Madrid', 'Centro', null, 10000, null)
 
 --2. Igual que el ejercicio anterior suponiendo que no sabemos cual es el orden de los campos en la
 
+INSERT INTO Oficinas (oficina, ciudad, region, dir, objetivo, ventas)
+VALUES (30, 'Madrid', 'Centro', null, 10000, null)
 
 --3. Insertar tus datos como nuevo empleado. Utilizar como numemp los tres últimos dígitos del dni, la
 --oficina 23, el puesto “Programador”, sin jefe, con una cuota de 1000 y las ventas a 0. En el contratola fecha de hoy.
 
+INSERT INTO Empleados 
+VALUES (569, 'Marta Requejo', 25, 23, 'Programador', CURRENT_TIMESTAMP, null, 1000, 0)
 
 --4. Insertar un nuevo cliente con tu nombre y utilizar como numclie 999. Dejar el resto de campos a
 --su valor por defecto.
 
 
+INSERT INTO Clientes VALUES (999, 'Marta Requejo', default, default)
+
 --5. Insertar los empleados que no tienen jefes como clientes. Como número de clientes utilizaremos
 --el mismo número de empleado, ellos mismo serán sus propios responsable y el límite de crédito será 0.
+
+INSERT INTO Clientes (numclie, nombre, resp, limitecredito)
+SELECT numemp, nombre, numemp, 0
+FROM Empleados
+WHERE jefe IS NULL
 
 
 --6. De la base de datos Robótica, insertar los dependientes como clientes de la base de datos Empresa. 
 --Para generar el numclie utilizaremos la suma del año, mes y día de la fecha de nacimiento de los
 --dependientes. El resp será el 108 y el límite de crédito 1000 euros.
+
 
 
 --7. Subir un 5% el precio de todos los productos del fabricante ‘ACI’.
