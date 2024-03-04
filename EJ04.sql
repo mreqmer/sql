@@ -1,21 +1,21 @@
 go
-use Librería
+use LibrerÃ­a
 go 
 CREATE TABLE Libro(
 	ISBN varchar(13) not null,
-	Títutlo varchar(10),
+	TÃ­tutlo varchar(10),
 	Editorial varchar(10),
 	Autor varchar (15),
 )
 go
 CREATE TABLE Editorial(
 	Nombre varchar(10) not null,
-	teléfono char(9),
+	telÃ©fono char(9),
 )
 go
 CREATE TABLE Autor(
 	Nombre varchar(15) not null,
-	añoNacimiento date
+	aÃ±oNacimiento date
 )
 go
 CREATE TABLE Stock(
