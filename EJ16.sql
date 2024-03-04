@@ -5,8 +5,8 @@ COD_EMPLEADO varchar(9) CONSTRAINT PKEmpleado PRIMARY KEY,
 NOMBRE varchar(30) not null,
 APELLIDOS varchar(50) not null,
 NIF char(9) not null UNIQUE,
-DIRECCIÓN varchar(49),
-TELÉFONO char(9),
+DIRECCIÃ“N varchar(49),
+TELÃ‰FONO char(9),
 SALARIO Money,
 )
 
