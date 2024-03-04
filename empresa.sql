@@ -77,7 +77,7 @@ ALTER TABLE Pedidos ADD CONSTRAINT FKPedidos_Cliente FOREIGN KEY (clie) REFERENC
 ALTER TABLE Pedidos ADD CONSTRAINT FKPedidos_Empleados FOREIGN KEY (resp) REFERENCES Empleados(numemp);
 ALTER TABLE Pedidos ADD CONSTRAINT FKPedidos_Productos FOREIGN KEY (fab, producto) REFERENCES Productos(idfab, idproducto);
 
-/*añadir campos a tablas*/
+/*aÃ±adir campos a tablas*/
 ALTER TABLE Empleados ADD sueldo int;
 ALTER TABLE Cliente ADD cuenta_bancaria int;
 ALTER TABLE Productos ADD color int;
