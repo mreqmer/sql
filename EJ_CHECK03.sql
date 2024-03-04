@@ -21,7 +21,7 @@ CONSTRAINT FKDatosRelacionados_DatosRestrictivos FOREIGN KEY REFERENCES DatosRes
 PalabraTabu char(20),
 NumRarito TinyInt,
 NumMasGrande SmallInt CONSTRAINT PKDatosRelacionados PRIMARY KEY,
-CONSTRAINT CKPalabraTabu CHECK (PalabraTabu NOT IN ('MENA', 'Gurtel', 'Ere', 'Procés', 'sobresueldo') AND PalabraTabu NOT LIKE '%eo'),
+CONSTRAINT CKPalabraTabu CHECK (PalabraTabu NOT IN ('MENA', 'Gurtel', 'Ere', 'ProcÃ©s', 'sobresueldo') AND PalabraTabu NOT LIKE '%eo'),
 CONSTRAINT CKNumRarito CHECK (NumRarito NOT IN (2, 3, 7, 11, 13, 17)),
 CONSTRAINT CKNumMasGrande CHECK (NumMasGrande between NumRarito AND 1000), 
 )
