@@ -2,7 +2,7 @@ USE Ejercicio14
 
 CREATE TABLE Edificio(
 nombre varchar(40)NOT NULL,
-dirección varchar(40)NOT NULL,
+direcciÃ³n varchar(40)NOT NULL,
 CONSTRAINT PKEdificio PRIMARY KEY (nombre),
 )
 
@@ -12,8 +12,8 @@ edificio varchar(40)NOT NULL
 CONSTRAINT FKEdificio FOREIGN KEY REFERENCES Edificio(nombre)
 ON DELETE CASCADE
 ON UPDATE CASCADE,
-número smallint NOT NULL,
-CONSTRAINT PKOficina PRIMARY KEY (edificio, número),
+nÃºmero smallint NOT NULL,
+CONSTRAINT PKOficina PRIMARY KEY (edificio, nÃºmero),
 )
 
 
@@ -26,10 +26,10 @@ CREATE TABLE EmpleadoOficinista(
 dni char(9) NOT NULL,
 nombre varchar(40),
 sueldo money,
-titulación varchar(40),
+titulaciÃ³n varchar(40),
 oficina smallint NOT NULL,
 edificio varchar(40)NOT NULL,
-CONSTRAINT FKedificio_Oficinista Foreign key (edificio,oficina)REFERENCES Oficina (edificio,número),
+CONSTRAINT FKedificio_Oficinista Foreign key (edificio,oficina)REFERENCES Oficina (edificio,nÃºmero),
 CONSTRAINT PKEmpleadoOficina PRIMARY KEY (dni),
 jefe char (9)
 CONSTRAINT FKjefe_Oficinista Foreign key REFERENCES EmpleadoOficinista (dni),
